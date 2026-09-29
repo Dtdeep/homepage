@@ -82,8 +82,8 @@ header {
 
 article.project-card {
   background-color: white;
-  width: 275px;
-  height: 420px;
+  max-width: 300px;
+  max-height: 420px;
   box-shadow: 4px 8px 12px -5px rgba(0, 0, 0, 0.26);
 }
 
@@ -91,12 +91,17 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 50px;
+  padding: 0px min(2.5vw, 15px) 50px min(2.5vw, 15px);
 }
 
-main > section {
+main > .project-section {
+  width: 100%;
+  max-width: 1000px;
   display: grid;
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  row-gap: 50px;
+  column-gap: 25px;
+  justify-items: center;
 }
 
 .pname-links {
@@ -123,7 +128,7 @@ main > section {
 }
 
 .bottom-half-card {
-  padding: 17px;
+  padding: 17px 20px 50px 20px;
   height: 175;
 }
 
@@ -243,5 +248,9 @@ p.footer-message {
 
   header {
     padding: 145px 65px 85px 65px;
+  }
+
+  main {
+    padding: 0px 65px 200px 65px;
   }
 }
