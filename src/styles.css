@@ -32,6 +32,7 @@ header {
   padding-bottom: 75px;
 }
 .box {
+  top: 0px;
   width: 100%;
   height: 405px;
   position: absolute;
@@ -42,7 +43,7 @@ header {
   margin-top: 25px;
   object-fit: cover;
   width: 84vw;
-  max-width: 400px;
+  max-width: 335px;
   height: 400px;
   object-position: top 10px;
   box-shadow: 5px 8px 12px -5px rgba(0, 0, 0, 0.35);
@@ -56,7 +57,7 @@ header {
   position: absolute;
   bottom: 20px;
   left: 10px;
-  font-size: 4.75rem;
+  font-size: 4.4rem;
   color: white;
   line-height: 64px;
   font-family: Playfair Display;
@@ -90,6 +91,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 main > section {
@@ -199,4 +201,47 @@ p.footer-message {
 .pname-links > h3 {
   font-family: Playfair Display;
   font-weight: 550;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .portrait-image {
+    width: 40vw;
+    max-width: 265px;
+    height: 300px;
+    margin: 0;
+    margin-right: 20px;
+    float: left;
+    transform: scale(1.3, 1.3) translateX(-25px) translateY(-25px);
+  }
+  .h2-about-me {
+    padding-top: 70px;
+    margin-top: 0;
+  }
+  .about-me-container {
+    background-color: white;
+    display: block;
+    padding: 0 min(3.3vw, 35px) 30px min(3.3vw, 35px);
+    max-width: 750px;
+    box-shadow: 5px 8px 12px -5px rgba(0, 0, 0, 0.35);
+  }
+  .h1-title {
+    font-size: 3rem;
+    top: -73px;
+    left: min(42.5vw, 285px);
+    width: 300px;
+    height: 90px;
+  }
+  .logos-svg-container {
+    justify-content: right;
+  }
+
+  header {
+    padding: 145px 65px 85px 65px;
+  }
 }
