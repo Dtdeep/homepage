@@ -60,8 +60,9 @@ header {
   font-size: 4.4rem;
   color: white;
   line-height: 64px;
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-weight: 500;
+  padding-right: 8.6px;
 }
 
 .h2-about-me {
@@ -91,14 +92,14 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0px min(2.5vw, 15px) 50px min(2.5vw, 15px);
+  padding: 0px min(5.5vw, 55px) 50px min(5.5vw, 55px);
 }
 
 main > .project-section {
   width: 100%;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
   row-gap: 50px;
   column-gap: 25px;
   justify-items: center;
@@ -197,6 +198,7 @@ p.footer-message {
   font-weight: 550;
   font-size: 2rem;
   margin-bottom: 20px;
+  max-width: 1000px;
 }
 
 .pname-links > h3 {
@@ -221,6 +223,17 @@ p.footer-message {
 }
 
 @media (min-width: 600px) {
+  .Mikay-work {
+    width: 100%;
+    align-self: center;
+  }
+
+  main > .project-section {
+    justify-items: left;
+  }
+  .box {
+    height: 515px;
+  }
   .portrait-image {
     width: 40vw;
     max-width: 265px;
@@ -257,7 +270,7 @@ p.footer-message {
   }
 
   main {
-    padding: 0px 65px 200px 65px;
+    padding: 0px 30px 200px 30px;
   }
 
   .left-side-footer {
@@ -290,5 +303,65 @@ p.footer-message {
 
   div.svg-text > svg {
     display: block;
+  }
+}
+
+@media (min-width: 1100px) {
+  header {
+    height: 700px;
+  }
+  .box {
+    height: 660px;
+  }
+  h1.h1-title {
+    top: auto;
+    bottom: -115px;
+    left: -115px;
+    font-size: 4rem;
+  }
+
+  div.about-me-container {
+    display: grid;
+    max-width: 950px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100px minmax(220px, 1fr) 40px;
+    margin-left: 150px;
+
+    .logos-svg-container {
+      margin: 0;
+    }
+  }
+
+  .portrait-image {
+    display: block;
+  }
+
+  .h2-about-me {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+  }
+  .picture-with-title {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    align-self: center;
+  }
+
+  .portrait-image {
+    transform: translate(-95px, 10px) scale(1.7);
+  }
+
+  div.footer-img {
+    max-width: 800px;
+    height: 500px;
+    background-position: right top;
+  }
+
+  .about-paragraph {
+    padding-bottom: 25px;
+  }
+
+  .h1-title {
+    width: 400px;
   }
 }
